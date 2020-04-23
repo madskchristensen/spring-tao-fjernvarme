@@ -1,0 +1,92 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <base href="/umbraco/" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="noindex, nofollow">
+
+    <title ng-bind="$root.locationTitle">Umbraco</title>
+
+    <link href="DependencyHandler.axd?s=L3VtYnJhY28vYXNzZXRzL2Nzcy91bWJyYWNvLmNzczsvdW1icmFjb19jbGllbnQvdHJlZS90cmVlaWNvbnMuY3NzOy91bWJyYWNvL2xpYi9ib290c3RyYXAtc29jaWFsL2Jvb3RzdHJhcC1zb2NpYWwuY3NzOy91bWJyYWNvL2xpYi9mb250LWF3ZXNvbWUvY3NzL2ZvbnQtYXdlc29tZS5taW4uY3NzOw&amp;t=Css&amp;cdv=0" type="text/css" rel="stylesheet"/>
+
+
+</head>
+<noscript><h5><strong>&nbsp; JavaScript is disabled. Please enable to continue!</strong></h5></noscript>
+<body ng-class="{touch:touchDevice,emptySection:emptySection}" ng-controller="Umbraco.MainController" id="umbracoMainPageBody">
+    <div ng-hide="!authenticated" ng-cloak id="mainwrapper" class="clearfix" ng-click="closeDialogs($event)">
+
+        <umb-navigation></umb-navigation>
+
+        <section id="contentwrapper">
+            <div id="contentcolumn" ng-view>
+            </div>
+        </section>
+
+        <umb-notifications></umb-notifications>
+
+    </div>
+
+    <script type="text/javascript">
+                var Umbraco = {};
+                Umbraco.Sys = {};
+                Umbraco.Sys.ServerVariables = {
+                    "umbracoUrls": {
+                        "authenticationApiBaseUrl": "/umbraco/backoffice/UmbracoApi/Authentication/",
+                        "serverVarsJs": "/umbraco/ServerVariables?umb__rnd=ffffffff4659ab01",
+                        "externalLoginsUrl": "/umbraco/ExternalLogin"
+                    },
+                    "umbracoSettings": {
+                        "allowPasswordReset": true
+                    },
+                    "application": {
+                        "applicationPath": "/",
+                        "version": "7.5.15",
+                        "cdf": "0"
+                    },
+                    "isDebuggingEnabled" : false
+                };       
+            </script>
+
+    <script type="text/javascript">
+        document.angularReady = function(app) {
+
+            
+var errors = [];
+app.value("externalLoginInfo", {
+errors: errors,
+providers: []
+});
+
+            
+var errors = [];
+app.value("resetPasswordCodeInfo", {
+errors: errors,
+resetCodeModel: null
+});
+
+        }
+    </script>
+
+
+    
+    <script type="text/javascript" src="lib/rgrove-lazyload/lazyload.js"></script>
+    <script type="text/javascript" src="https://fjernvarme.albertslund.dk/umbraco/Application?umb__rnd=ffffffff4659ab01"></script>
+
+
+    <umb-overlay
+        ng-if="ysodOverlay.show"
+        model="ysodOverlay"
+        position="right"
+        view="ysodOverlay.view">
+    </umb-overlay>
+
+</body>
+</html>
